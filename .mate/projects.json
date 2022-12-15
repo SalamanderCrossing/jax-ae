@@ -1,0 +1,53 @@
+{
+    "ae": {
+        "name": "ae",
+        "project": {
+            "models": {
+                "ae": {
+                    "name": "ae",
+                    "exports": [
+                        "AE"
+                    ],
+                    "errors": []
+                }
+            },
+            "data_loaders": {
+                "cifar10_ae": {
+                    "name": "cifar10_ae",
+                    "exports": [
+                        "get_loaders"
+                    ],
+                    "errors": []
+                }
+            },
+            "trainers": {
+                "ae_trainer": {
+                    "name": "ae_trainer",
+                    "exports": [
+                        "TrainerModule"
+                    ],
+                    "errors": []
+                }
+            },
+            "experiments": {
+                "ae_cifar": {
+                    "name": "ae_cifar",
+                    "errors": [
+                        "ERROR in experiment \"ae_cifar\", line number:2.\n The experiment should not import from a subdirectory of models.\n You should import like so: \"from ..models.modelname import ModelClass\"",
+                        "The experiment should not import from a root module"
+                    ],
+                    "imports": [
+                        "data_loaders",
+                        "trainers"
+                    ]
+                },
+                "ae_on_cifar": {
+                    "name": "ae_on_cifar",
+                    "errors": [],
+                    "imports": []
+                }
+            }
+        },
+        "root": "/ae"
+    }
+}
