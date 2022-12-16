@@ -9,6 +9,13 @@
                         "AE"
                     ],
                     "errors": []
+                },
+                "googlenet": {
+                    "name": "googlenet",
+                    "exports": [
+                        "GoogleNet"
+                    ],
+                    "errors": []
                 }
             },
             "data_loaders": {
