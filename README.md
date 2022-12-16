@@ -1,1 +1,1 @@
-<div style='font-size:1px'> builtwithmate </div>
+<div style='font-size:1em;'> builtwithmate </div>
