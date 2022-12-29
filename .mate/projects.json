@@ -8,14 +8,51 @@
                     "exports": [
                         "AE"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.2"
+                        ]
+                    ]
                 },
                 "googlenet": {
                     "name": "googlenet",
                     "exports": [
                         "GoogleNet"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.2"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ]
+                    ]
+                },
+                "transformer": {
+                    "name": "transformer",
+                    "exports": [
+                        "TransformerPredictor"
+                    ],
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.2"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ],
+                        [
+                            "numpy",
+                            "1.23.5"
+                        ]
+                    ]
                 }
             },
             "data_loaders": {
@@ -24,7 +61,25 @@
                     "exports": [
                         "get_loaders"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "jax",
+                            "0.4.1"
+                        ],
+                        [
+                            "numpy",
+                            "1.23.5"
+                        ],
+                        [
+                            "torch",
+                            "1.13.0"
+                        ],
+                        [
+                            "torchvision",
+                            "0.14.0"
+                        ]
+                    ]
                 }
             },
             "trainers": {
@@ -33,7 +88,33 @@
                     "exports": [
                         "TrainerModule"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.2"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ],
+                        [
+                            "numpy",
+                            "1.23.5"
+                        ],
+                        [
+                            "optax",
+                            "0.1.4"
+                        ],
+                        [
+                            "torch",
+                            "1.13.0"
+                        ],
+                        [
+                            "tqdm",
+                            "4.64.1"
+                        ]
+                    ]
                 }
             },
             "experiments": {
@@ -41,7 +122,7 @@
                     "name": "ae_cifar",
                     "errors": [
                         "ERROR in experiment \"ae_cifar\", line number:2.\n The experiment should not import from a subdirectory of models.\n You should import like so: \"from ..models.modelname import ModelClass\"",
-                        "The experiment should not import from a root module"
+                        "The experiment should not import from a root "
                     ],
                     "imports": [
                         "data_loaders",
